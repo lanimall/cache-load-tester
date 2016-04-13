@@ -148,7 +148,7 @@ public class StatsReporter {
       finalise();
       doEndReport();
     } catch (InterruptedException e) {
-//			e.printStackTrace();
+        logger.error("Issue with interrupting threads", e);
     }
     reportThread.set(null);
     memoryReportThread.set(null);
